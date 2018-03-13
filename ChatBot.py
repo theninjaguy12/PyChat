@@ -15,16 +15,17 @@ class ChatBot:
     question it doesn't have an opinion on it will say something along the lines of "i cant say much about that"
     
     """
-    self.checkLibrary =[greetingChecks]
-    self.responseLibrary = [greetingResponse]
-  
-    self.greetingChecks = [0,"hi", "hey", "hello"]
-    self.greetingResponse = [0,"hi", "hey", "hello"]
-   
-    self.goodbyeChecks
-  
+    self.checkLibrary =[greetingChecks, goodbyeChecks]
+    self.responseLibrary = [greetingResponse, goodbyeResponse]
+    self.youLibrary = [youChecks] """Add checks for statements talking to the chatbot itself""" 
+    """ Expanded libraries for greetings and goodbyes"""
+    self.greetingChecks = [0,"hi", "hey", "hello", "yo", "wassup"]
+    self.greetingResponse = [0,"hi", "hey", "hello", "greetings earthling"]
+    self.youChecks = [0, "you", "pybot", "chatbot"] """dictionary for youLibrary, can be expanded"""
+    self.goodbyeChecks = [0, "goodbye", "bye", "see you later", "see you", "cheerio"] 
+    self.goodbyeResponse = [0, "bye", "bye bud", "see yah fam", "bye my nig nog", "see you in hell"]
   def respond(self, check, response, strInput):
-    
+  
     
     #Add String spacings
     strInput = " " + strInput + " "
@@ -48,5 +49,10 @@ class ChatBot:
                                      
   def analyzeString(self, checkLibrary, responseLibrary, string):
     pass
-    
+  
+   def input(self, youLibrary): """Input and check for statemetns directly addresssing the program (NO idea what tf im doing, just modeling after what you did)"""
+      for x in range (0, len()):
+        if checkInsen[x] in youLibrary:
+          respondYou = "Are you talking to me, fatty?"
+          return respondYou;
     
